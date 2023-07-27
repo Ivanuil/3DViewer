@@ -45,9 +45,9 @@ All default GNU Make stages are supported. Also this stages are available:
  - ``gcov_report`` Same as **test**, but also generates gcov report, with line coverage data. (Requirements: Check.h library, lcov tool)
  - ``codestyle`` Performs code style tests using clang-format tool. (Requirements: clang-format tool)
 
-Prebuilt documentation is available in **documentation** folder. Run \
- `` make dvi `` \
-in order to rebuild documentation (Doxygen tool is required).
+To export documentation to html and latex run: \
+`` make dvi `` \
+Doxygen tool is required. Resulting documentation can be found in **documentation** directory.
 
 ## Contacts
 
