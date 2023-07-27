@@ -1,0 +1,22 @@
+{
+    "cSpell.words": [
+        "codestyle",
+        "Doxygen",
+        "gcov",
+        "GIFLIB",
+        "glwidget",
+        "lcov",
+        "margetem",
+        "Pixmap",
+        "Pronin",
+        "wakatime",
+        "whatisnext",
+        "wireframe"
+    ],
+    "files.associations": {
+        "object_reader.h": "c",
+        "test.h": "c",
+        "string": "cpp",
+        "list": "cpp"
+    }
+}
