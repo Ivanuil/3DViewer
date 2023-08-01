@@ -24,12 +24,14 @@ void rotateObjectX(Object* object, double rotateX, int* error) {
   if (object == NULL) *error = NULL_POINTER;
   if (*error != SUCCESS) return;
 
+  double sinV = sin(rotateX);
+  double cosV = cos(rotateX);
   for (unsigned int i = 0; i < object->verticesNumber; i++) {
     double y = object->vertices[i].y;
     double z = object->vertices[i].z;
 
-    object->vertices[i].y = y * cos(rotateX) + z * sin(rotateX);
-    object->vertices[i].z = (-y) * sin(rotateX) + z * cos(rotateX);
+    object->vertices[i].y = y * cosV + z * sinV;
+    object->vertices[i].z = (-y) * sinV + z * cosV;
 
     if (i == 0) {
       object->minVertex = object->vertices[i];
@@ -43,12 +45,14 @@ void rotateObjectY(Object* object, double rotateY, int* error) {
   if (object == NULL) *error = NULL_POINTER;
   if (*error != SUCCESS) return;
 
+  double sinV = sin(rotateY);
+  double cosV = cos(rotateY);
   for (unsigned int i = 0; i < object->verticesNumber; i++) {
     double x = object->vertices[i].x;
     double z = object->vertices[i].z;
 
-    object->vertices[i].x = x * cos(rotateY) + z * sin(rotateY);
-    object->vertices[i].z = (-x) * sin(rotateY) + z * cos(rotateY);
+    object->vertices[i].x = x * cosV + z * sinV;
+    object->vertices[i].z = (-x) * sinV + z * cosV;
 
     if (i == 0) {
       object->minVertex = object->vertices[i];
@@ -62,12 +66,14 @@ void rotateObjectZ(Object* object, double rotateZ, int* error) {
   if (object == NULL) *error = NULL_POINTER;
   if (*error != SUCCESS) return;
 
+  double sinV = sin(rotateZ);
+  double cosV = cos(rotateZ);
   for (unsigned int i = 0; i < object->verticesNumber; i++) {
     double x = object->vertices[i].x;
     double y = object->vertices[i].y;
 
-    object->vertices[i].x = x * cos(rotateZ) + y * sin(rotateZ);
-    object->vertices[i].y = (-x) * sin(rotateZ) + y * cos(rotateZ);
+    object->vertices[i].x = x * cosV + y * sinV;
+    object->vertices[i].y = (-x) * sinV + y * cosV;
 
     if (i == 0) {
       object->minVertex = object->vertices[i];
